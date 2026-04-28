@@ -7,11 +7,11 @@ import org.testng.annotations.Test;
 
 import Base.BaseTest;
 import Pages.LoginPage;
-import Tests.DataProviders;
+import Utils.DataProviders;
 
 public class LoginTest extends BaseTest {
 
-    @Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "testData", dataProviderClass = DataProviders.class)
     public void loginTest(Map<String, String> testData) {
 
         // Create Page Object
@@ -19,7 +19,7 @@ public class LoginTest extends BaseTest {
 
         // Perform login using data from DataProvider
         loginPage.login(
-                testData.get("UserName"),
+                testData.get("Username"),
                 testData.get("Password")
         );
 
