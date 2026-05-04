@@ -1,4 +1,22 @@
+# TestNG reports
 test-output/
+
+# Maven build
 target/
+
+# Compiled files
 *.class
+
+# Logs
 *.log
+
+# Allure reports
+allure-results/
+allure-report/
+
+# IDE files (very important for clean repo)
+.classpath
+.project
+.settings/
+.idea/
+*.iml

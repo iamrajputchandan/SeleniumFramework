@@ -50,9 +50,14 @@ public class TransferFundsPage {
     }
 
     public void transferAmount(String amount, String from, String to) {
+    	
+    	wait.waitForVisibility(amountField);
         amountField.sendKeys(amount);
 
+        wait.waitForDropdownOptions(fromAccount);
         new Select(fromAccount).selectByValue(from);
+               
+        wait.waitForDropdownOptions(toAccount);
         new Select(toAccount).selectByValue(to);
         
         wait.waitForVisibility(transferBtn);
